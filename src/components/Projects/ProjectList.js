@@ -9,10 +9,10 @@ const ProjectList = ({ projects }) => {
     return(
         < >
             {( projects.length > 0) ?
-        renderProjects
-        :
-        <i>There are no matching results.</i>
-      } 
+                renderProjects
+                :
+                <i>There are no results.</i>
+            } 
         </ >
     )
 }
