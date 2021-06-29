@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { Markup } from 'interweave';
+import Container from 'react-bootstrap/Container';
+import CommentsContainer from '../../containers/CommentsContainer'
 
-const ProjectDetails = ({projects}) => {
+const ProjectDetails = ({ match, projects }) => {
+    const project = projects.find(proj => proj.id.toString() === match.params.projectId)
     const renderProject = () => {
         const img = project.image_url
 
@@ -20,7 +22,7 @@ const ProjectDetails = ({projects}) => {
 
                 <div>
                     <h3>{project.name}</h3>
-                    <img alt="{project.name}" src="{img}" />
+                    <img alt="{project.name}" src={img} />
                     <ul>
                         {labelList}
                     </ul>
@@ -44,3 +46,5 @@ const ProjectDetails = ({projects}) => {
         </>
     )
 }
+
+export default ProjectDetails

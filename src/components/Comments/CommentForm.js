@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'react-bootstrap/Form';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+import { Button, Card, Col, Form } from 'reactstrap';
 
 class CommentForm extends Component {
     state = {
@@ -61,9 +58,7 @@ class CommentForm extends Component {
                                     onChange={this.handleOnChange}
                                 />
                             </Form.Group>
-                            <Button type="submit">
-                                Submit
-                            </Button>
+                            <Button type="submit">Submit Comment</Button>
                     </Form>
                 </Card>
             </div>

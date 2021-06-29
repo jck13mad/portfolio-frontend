@@ -17,7 +17,6 @@ class ProjectsContainer extends Component {
             <div id='projects-container'>
                 {
                     loading ?
-                    //loading image
                     <img src={Loading} alt='loading' />
                     :
                     < >
@@ -38,6 +37,7 @@ class ProjectsContainer extends Component {
 
 const mapStateToProps = state => {
     return {
+        projects: state.projects,
         loading: state.projects.loading
     }
 }

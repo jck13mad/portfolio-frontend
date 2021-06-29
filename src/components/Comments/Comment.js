@@ -1,6 +1,6 @@
 import React from 'react';
 import Moment from 'react-moment';
-import Card from 'react-bootstrap/Card';
+import { Card } from 'reactstrap';
 
 const Comment = ({ comment }) => {
     return(
