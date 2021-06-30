@@ -5,9 +5,9 @@ const Contact = () => {
     return(
         <div id='contact'>
             <h2>CONTACT</h2>
-            <a href="mailto:jck13mad@gmail.com" target="_blank">
-                Email
-            </a>
+            <p>Email: <a href="mailto:jck13mad@gmail.com" target="_blank">
+                jck13mad@gmail.com
+            </a></p>
         
         </div>
     )

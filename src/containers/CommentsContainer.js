@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Comments from '../components/Comments/Comments'
-import CommentForm from '../components/Comments/CommentForm'
+import CommentForm from '../components/Comments/CommentForm.js'
 import { addComment } from "../actions/addComment";
 import { connect } from 'react-redux';
 

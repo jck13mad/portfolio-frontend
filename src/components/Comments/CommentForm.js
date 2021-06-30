@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Card, Col, Form } from 'reactstrap';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControl from '@material-ui/core/FormControl'
 
 class CommentForm extends Component {
     state = {
@@ -9,7 +11,7 @@ class CommentForm extends Component {
 
     handleOnChange = event => {
         this.setState({
-            [event.target.name]: event.target.value
+            [event.target.name]: event.target.value,
         })
     }
 
@@ -36,8 +38,8 @@ class CommentForm extends Component {
                     <Form role="form" onSubmit={this.handleOnSubmit}>
                         <h5>Comment Here:</h5>
                         <Col>
-                            <Form.Group controlId="formUser">
-                                <Form.Control
+                            <FormGroup controlId="formUser">
+                                <FormControl
                                     name="u_name"
                                     type="text"
                                     placeholer="Your Name"
@@ -45,10 +47,10 @@ class CommentForm extends Component {
                                     required
                                     onChange={this.handleOnChange}
                                 />
-                            </Form.Group>
+                            </FormGroup>
                         </Col> 
-                            <Form.Group controlId="formContent">
-                                <Form.Control
+                            <FormGroup controlId="formContent">
+                                <FormControl
                                     name="content"
                                     as="textarea"
                                     rows="3"
@@ -57,7 +59,7 @@ class CommentForm extends Component {
                                     required
                                     onChange={this.handleOnChange}
                                 />
-                            </Form.Group>
+                            </FormGroup>
                             <Button type="submit">Submit Comment</Button>
                     </Form>
                 </Card>
@@ -66,4 +68,4 @@ class CommentForm extends Component {
     }
 }
 
-export default CommentForm
+export default CommentForm;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-// import 'bootswatch/dist/litera/bootstrap.min.css';
 import './App.css';
 import NavBar from './components/NavBar'
 import Home from './components/Home'
@@ -14,7 +13,7 @@ class App extends Component {
       <div className='App' id='page-top' >
         <NavBar />
         <Contact />
-        {/* When URL matches specified path, render component */}
+
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
         <ProjectsContainer />

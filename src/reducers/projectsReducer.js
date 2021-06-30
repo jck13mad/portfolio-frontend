@@ -1,10 +1,12 @@
 const initialState = {
     allProjects: [],
+    projects: [],
     loading: false
 }
 
-export default function projectsReducer( state = 
-    initialState, action) {
+const projectsReducer = ( state = initialState, action) => {
+    // let projects = []
+
     switch (action.type) {
         case 'LOADING_PROJECTS':
             return {
@@ -17,19 +19,20 @@ export default function projectsReducer( state =
             return {
                 ...state,
                 allProjects: action.projects,
+                projects: action.projects,
                 loading: false
             }
 
         case 'ADD_COMMENT':
-            let index = state.allProjects.findIndex(project => project.id === action.comment.project_id);
-            let project = state.allProjects[index];
+            let index = state.projects.findIndex(project => project.id === action.comment.project_id);
+            let project = state.projects[index];
           
             return {
                 ...state,
-                allProjects: [
-                    ...state.allProjects.slice(0, index),
+                projects: [
+                    ...state.projects.slice(0, index),
                     { ...project, comments: project.comments.concat(action.comment) },
-                    ...state.allProjects.slice(index + 1)
+                    ...state.projects.slice(index + 1)
                 ]
             }
          
@@ -37,3 +40,5 @@ export default function projectsReducer( state =
             return state;
     }
 }
+
+export default projectsReducer

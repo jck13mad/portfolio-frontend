@@ -12,7 +12,7 @@ class ProjectsContainer extends Component {
     }
 
     render() {
-        const { loading } = this.props
+        const { projects, loading } = this.props
         return(
             <div id='projects-container'>
                 {
@@ -20,12 +20,12 @@ class ProjectsContainer extends Component {
                     <img src={Loading} alt='loading' />
                     :
                     < >
-                        <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} />} />
+                        <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} projects={projects} />} />
                         <Route exact path='/projects' render={() =>
                             <div id='portfolio'>
                                 <h1>PORTFOLIO</h1>
                                 <h3>My Latest Projects</h3>
-                                <ProjectList />
+                                <ProjectList projects={projects}/>
                             </div>
                         } />
                     </ >
@@ -37,7 +37,7 @@ class ProjectsContainer extends Component {
 
 const mapStateToProps = state => {
     return {
-        projects: state.projects,
+        projects: state.projects.projects,
         loading: state.projects.loading
     }
 }
