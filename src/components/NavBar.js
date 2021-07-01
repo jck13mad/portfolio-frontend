@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return(
-        <nav id='mainNav'>
-            <div id='navList'>
-                <ul className="navbar-nav">
+        <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto">
                     <li className='nav-item'>
                         <NavLink
-                            className='nav-link'
+                            className='nav-link active'
                             to="/"
                             exact
                         >Home</NavLink>
@@ -26,13 +26,6 @@ const NavBar = () => {
                             to="/projects"
                             exact
                         >Portfolio</NavLink>
-                    </li>
-                    <li className='nav-item'>
-                        <NavLink
-                            className='nav-link'
-                            to="/contact"
-                            exact
-                        >Contact</NavLink>
                     </li>
                 </ul>
             </div>

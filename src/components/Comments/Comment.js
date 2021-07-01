@@ -1,6 +1,7 @@
 import React from 'react';
 import Moment from 'react-moment';
-import { Card } from 'reactstrap';
+import { Card, CardBody, CardText, CardTitle, CardSubtitle } from 'reactstrap';
+
 
 const Comment = ({ comment }) => {
     return(
@@ -9,15 +10,13 @@ const Comment = ({ comment }) => {
                 bg='light'
                 style={{ width: '100%' }}
             >
-                <Card.Header>
+                <CardTitle class="card-header">
                     <b>{comment.u_name}</b>
-                    <br />
-                    <Moment fromNow>{comment.created_at}</Moment>
-                </Card.Header>
-
-                <Card.Body>
-                    <Card.Text>{comment.content}</Card.Text>
-                </Card.Body>
+                </CardTitle>
+                <CardSubtitle><Moment fromNow>{comment.created_at}</Moment></CardSubtitle>
+                <CardBody>
+                    <CardText>{comment.content}</CardText>
+                </CardBody>
             </Card>
         </div>
     );

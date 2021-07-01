@@ -12,11 +12,12 @@ class App extends Component {
     return (
       <div className='App' id='page-top' >
         <NavBar />
-        <Contact />
 
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
         <ProjectsContainer />
+
+        <Contact class="footer"/>
       </div>
     );
   }

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, Col, Form } from 'reactstrap';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControl from '@material-ui/core/FormControl'
+import { Form } from 'reactstrap';
 
 class CommentForm extends Component {
     state = {
@@ -22,7 +20,7 @@ class CommentForm extends Component {
             ...this.state,
             project_id: this.props.projectId,
         }
-
+        debugger
         this.props.addComment(comment)
 
         this.setState({
@@ -34,35 +32,28 @@ class CommentForm extends Component {
     render(){
         return(
             <div>
-                <Card>
+                <h5>Comment Here:</h5>
+                <div class="form-group">
                     <Form role="form" onSubmit={this.handleOnSubmit}>
-                        <h5>Comment Here:</h5>
-                        <Col>
-                            <FormGroup controlId="formUser">
-                                <FormControl
-                                    name="u_name"
-                                    type="text"
-                                    placeholer="Your Name"
-                                    value={this.state.u_name}
-                                    required
-                                    onChange={this.handleOnChange}
-                                />
-                            </FormGroup>
-                        </Col> 
-                            <FormGroup controlId="formContent">
-                                <FormControl
-                                    name="content"
-                                    as="textarea"
-                                    rows="3"
-                                    placeholer="Enter Comment"
-                                    value={this.state.value}
-                                    required
-                                    onChange={this.handleOnChange}
-                                />
-                            </FormGroup>
-                            <Button type="submit">Submit Comment</Button>
+                        <input 
+                            class="form-control"
+                            name="u_name" 
+                            type="text" 
+                            placeholder="Your Name Please" 
+                            value={this.state.u_name} 
+                            required 
+                            onChange={this.handleOnChange} />
+                        <input  
+                            class="form-control"
+                            name="content" 
+                            type="textarea"
+                            placeholder="Enter Comment" 
+                            value={this.state.content}
+                            required
+                            onChange={this.handleOnChange}/>
+                        <button type="submit">Submit</button>
                     </Form>
-                </Card>
+                </div>
             </div>
         )
     }

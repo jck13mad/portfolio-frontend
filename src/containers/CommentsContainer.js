@@ -12,6 +12,7 @@ class CommentsContainer extends Component {
                     addComment={this.props.addComment}
                     projectId={this.props.project.id}
                 />
+                <br />
                 {this.props.project.comments.length > 0 ?
                     <Comments
                         projectComments={this.props.project.comments}
@@ -19,6 +20,7 @@ class CommentsContainer extends Component {
                     :
                     <i>This project does not have any comments yet.</i>
                 }
+                <br />
             </div>
         )
     }

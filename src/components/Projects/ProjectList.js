@@ -2,7 +2,7 @@ import React from 'react';
 import Project from './Project'
 
 const ProjectList = ({ projects }) => {
-    debugger
+    // debugger
     const renderProjects = projects.map(project => 
         <Project key={project.id} project={project} />
     )

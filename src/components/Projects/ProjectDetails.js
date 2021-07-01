@@ -6,12 +6,12 @@ import CommentsContainer from '../../containers/CommentsContainer'
 const ProjectDetails = ({ match, projects }) => {
     const project = projects.find(proj => proj.id.toString() === match.params.projectId)
     const renderProject = () => {
-        const img = project.image_url
+        let img = './images/' + project.image_url
 
         let newLabels = project.label.split(" ")
         let labelList = [];
         newLabels.forEach((label, index) => {
-            labelList.push(<li key={index}>{label}</li>)
+            labelList.push(<li key={index}>| <b>{label}</b> |</li>)
         })
 
         return[
@@ -19,11 +19,12 @@ const ProjectDetails = ({ match, projects }) => {
                 <Link to={'/projects'}>
                     Back to All Projects
                 </Link>
-
+                <br />
+                <br />
                 <div>
                     <h3>{project.name}</h3>
-                    <img alt="{project.name}" src={img} />
-                    <ul>
+                    {/* <img alt={project.name} src={img} /> */}
+                    <ul class="label-list">
                         {labelList}
                     </ul>
                     <p>{project.description}</p>
@@ -43,6 +44,8 @@ const ProjectDetails = ({ match, projects }) => {
             <Link to={'/projects'}>
                 Back to All Projects
             </Link>
+            <br />
+            <br />
         </>
     )
 }
