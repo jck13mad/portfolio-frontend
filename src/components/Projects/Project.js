@@ -9,14 +9,13 @@ const Project = ({ project }) => {
         labelList.push(<li key={index}>| <b>{label}</b> |</li>)
     })
 
-    let img = './images/' + project.image_url
-
     return(
-        <div>
+        <div id='project-list'>
             <Link key={project.id} to={`/projects/${project.id}`}>
-                <h4>{project.name}</h4>
+                <h4><a>{project.name}</a></h4>
             </Link>
-            <img alt={project.name} src={img} />
+            <img alt={project.name} src={project.image_url}/>
+            <hr />
             <ul class="label-list" >
                 {labelList}
             </ul>

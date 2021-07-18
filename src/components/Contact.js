@@ -4,8 +4,8 @@ import React from 'react'
 const Contact = () => {
     return(
         <div id='contact'>
-            <h2>CONTACT</h2>
-            <p>Email: <a href="mailto:jck13mad@gmail.com" target="_blank">
+            <h3>CONTACT</h3>
+            <p>Email: <a href="mailto:jck13mad@gmail.com" target="_blank" rel="noreferrer">
                 jck13mad@gmail.com
             </a></p>
         

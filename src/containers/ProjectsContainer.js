@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import ProjectList from '../components/Projects/ProjectList'
 import ProjectDetails from '../components/Projects/ProjectDetails'
 import { fetchProjects } from "../actions/fetchProjects";
-import Loading from '../images/loading.gif'
+import Loading from '../components/Loading'
 
 class ProjectsContainer extends Component {
     componentDidMount() {
@@ -17,15 +17,16 @@ class ProjectsContainer extends Component {
             <div id='projects-container'>
                 {
                     loading ?
-                    <img src={Loading} alt='loading' />
+                    <Loading />
                     :
                     < >
                         <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} projects={projects} />} />
                         <Route exact path='/projects' render={() =>
                             <div id='portfolio'>
                                 <h1>PORTFOLIO</h1>
-                                <h3>My Latest Projects</h3>
+                                <br /><br />
                                 <ProjectList projects={projects}/>
+                                <br /><br /><br /><br />
                             </div>
                         } />
                     </ >

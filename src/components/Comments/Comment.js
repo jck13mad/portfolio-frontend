@@ -8,7 +8,6 @@ const Comment = ({ comment }) => {
         <div>
             <Card 
                 bg='light'
-                style={{ width: '100%' }}
             >
                 <CardTitle class="card-header">
                     <b>{comment.u_name}</b>

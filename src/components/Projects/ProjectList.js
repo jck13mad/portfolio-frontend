@@ -7,13 +7,13 @@ const ProjectList = ({ projects }) => {
         <Project key={project.id} project={project} />
     )
     return(
-        < >
-            {( projects.length > 0) ?
-                renderProjects
-                :
-                <i>There are no results.</i>
-            } 
-        </ >
+            <div>
+                    {( projects.length > 0) ?
+                        renderProjects
+                        :
+                        <i>There are no results.</i>
+                    } 
+            </div>
     )
 }
 

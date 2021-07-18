@@ -6,7 +6,6 @@ import CommentsContainer from '../../containers/CommentsContainer'
 const ProjectDetails = ({ match, projects }) => {
     const project = projects.find(proj => proj.id.toString() === match.params.projectId)
     const renderProject = () => {
-        let img = './images/' + project.image_url
 
         let newLabels = project.label.split(" ")
         let labelList = [];
@@ -23,7 +22,6 @@ const ProjectDetails = ({ match, projects }) => {
                 <br />
                 <div>
                     <h3>{project.name}</h3>
-                    {/* <img alt={project.name} src={img} /> */}
                     <ul class="label-list">
                         {labelList}
                     </ul>
@@ -34,6 +32,12 @@ const ProjectDetails = ({ match, projects }) => {
                 {project.github_url ? <button onClick={() => window.open(project.github_url, "_blank")}>GITHUB</button> : null}
                 <hr />
                 <CommentsContainer project={project} />
+                <br />
+                <Link to={'/projects'}>
+                    Back to All Projects
+                </Link>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            
             </Container>
         ]
     }
@@ -41,11 +45,9 @@ const ProjectDetails = ({ match, projects }) => {
     return (
         < >
             {project ? renderProject() : <i>Sorry, but this project does not exist.</i>}
-            <Link to={'/projects'}>
+            {/* <Link to={'/projects'} id="back-bottom">
                 Back to All Projects
-            </Link>
-            <br />
-            <br />
+            </Link> */}
         </>
     )
 }
