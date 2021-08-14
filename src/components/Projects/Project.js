@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LazyLoad from "react-lazyload";
 
 const Project = ({ project }) => {
     
@@ -13,8 +14,10 @@ const Project = ({ project }) => {
         <div id='project-list'>
             <Link key={project.id} to={`/projects/${project.id}`}>
                 <h4><a>{project.name}</a></h4>
+                <LazyLoad height={250} once>
+                    <img alt={project.name} src={project.image_url}/>
+                </LazyLoad>
             </Link>
-            <img alt={project.name} src={project.image_url}/>
             <hr />
             <ul class="label-list" >
                 {labelList}

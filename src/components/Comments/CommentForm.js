@@ -20,7 +20,6 @@ class CommentForm extends Component {
             ...this.state,
             project_id: this.props.projectId,
         }
-        debugger
         this.props.addComment(comment)
 
         this.setState({

@@ -15,12 +15,9 @@ const ProjectDetails = ({ match, projects }) => {
 
         return[
             <Container>
-                <Link to={'/projects'}>
-                    Back to All Projects
-                </Link>
                 <br />
                 <br />
-                <div>
+                <div className="project-head">
                     <h3>{project.name}</h3>
                     <ul class="label-list">
                         {labelList}
@@ -36,7 +33,7 @@ const ProjectDetails = ({ match, projects }) => {
                 <Link to={'/projects'}>
                     Back to All Projects
                 </Link>
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br />
             
             </Container>
         ]

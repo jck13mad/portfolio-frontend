@@ -24,7 +24,6 @@ const projectsReducer = ( state = initialState, action) => {
             }
 
         case 'ADD_COMMENT':
-            debugger
             let index = state.projects.findIndex(project => project.id === action.comment.project_id);
             let project = state.projects[index];
           

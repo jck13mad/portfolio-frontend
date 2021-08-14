@@ -15,9 +15,9 @@ class App extends Component {
           <NavBar />
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
-          <div className="projects" style={{backgroundImage: `url(./images/skylinegradient.jpg)`}}>
+          <div className="projects">
             <ProjectsContainer />
-            </div>
+          </div>
           <Contact class="footer"/>
       </div>
     );

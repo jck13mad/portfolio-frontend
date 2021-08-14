@@ -6,9 +6,7 @@ import { Card, CardBody, CardText, CardTitle, CardSubtitle } from 'reactstrap';
 const Comment = ({ comment }) => {
     return(
         <div>
-            <Card 
-                bg='light'
-            >
+            <Card bg='light'>
                 <CardTitle class="card-header">
                     <b>{comment.u_name}</b>
                 </CardTitle>

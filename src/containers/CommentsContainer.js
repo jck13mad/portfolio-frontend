@@ -18,7 +18,7 @@ class CommentsContainer extends Component {
                         projectComments={this.props.project.comments}
                     />
                     :
-                    <i>This project does not have any comments yet.</i>
+                    <div></div>
                 }
                 <br />
             </div>
