@@ -23,7 +23,7 @@ class ProjectsContainer extends Component {
                         <Route path='/projects/:projectId' render={routerProps => <ProjectDetails {...routerProps} projects={projects} />} />
                         <Route exact path='/projects' render={() =>
                             <div id='portfolio'>
-                                <h1>PORTFOLIO</h1>
+                                <h1>Portfolio</h1>
                                 <br /><br />
                                 <ProjectList projects={projects}/>
                                 <br /><br /><br /><br />

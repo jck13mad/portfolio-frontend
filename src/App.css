@@ -226,6 +226,25 @@ li {
    line-height: inherit;
  }
 
+ .blog {
+   margin-bottom: 10rem;
+   display: inline-block;
+ }
+
+ .blog-sing {
+   margin-top: 1rem;
+   text-align: center;
+ }
+
+ #blogs-container {
+   text-align: center;
+ }
+
+ .blog-card {
+   max-width: 50rem;
+
+ }
+
  #contact {
   position: fixed;
   width: 100%;

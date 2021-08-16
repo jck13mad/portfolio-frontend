@@ -11,12 +11,13 @@ class BlogsContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div id='blogs-container'>
                 {
                     this.props.loadingBlog ? 
                     <img src={Loading} alt='loading' />
                     :
                     < >
+                        <a href="https://www.blogger.com/blog/posts/7154752201469865972"><h1>Blog</h1></a>
                         <Blog blogPosts={this.props.blogPosts} />
                     </ >
                 }

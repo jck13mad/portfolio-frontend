@@ -7,11 +7,8 @@ const Blog = ({ blogPosts }) => {
     })
 
     return (
-        <div>
-            <h1>Blog</h1>
-            <div>
+        <div className="blog">
                 {blogList}
-            </div>
         </div>
     )
 }
