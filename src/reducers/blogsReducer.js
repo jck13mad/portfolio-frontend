@@ -1,19 +1,19 @@
-const blogsReducer = (state = {
-    blogs: [],
+const blogPostsReducer = (state = {
+    blogPosts: [],
     loadingBlog: false 
 }, action) => {
     switch (action.type) {
         case 'LOADING_BLOG':
             return {
                 ...state,
-                blogs: [...state.blogs],
+                blogPosts: [...state.blogPosts],
                 loadingBlog: true
             }
 
         case 'ADD_BLOG':
             return {
                 ...state,
-                blogs: action.blog,
+                blogPosts: action.blogPosts,
                 loadingBlog: false
             }
 
@@ -22,4 +22,4 @@ const blogsReducer = (state = {
     }
 }
 
-export default blogsReducer;
+export default blogPostsReducer;

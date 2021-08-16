@@ -27,6 +27,13 @@ const NavBar = () => {
                             exact
                         >Portfolio</NavLink>
                     </li>
+                    <li className='nav-item'>
+                        <NavLink
+                            className='nav-link'
+                            to="/blog"
+                            exact
+                            >Blog</NavLink>
+                    </li>
                 </ul>
             </div>
         </nav>

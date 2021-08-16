@@ -42,9 +42,6 @@ const ProjectDetails = ({ match, projects }) => {
     return (
         < >
             {project ? renderProject() : <i>Sorry, but this project does not exist.</i>}
-            {/* <Link to={'/projects'} id="back-bottom">
-                Back to All Projects
-            </Link> */}
         </>
     )
 }
