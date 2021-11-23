@@ -13,7 +13,7 @@ const Project = ({ project }) => {
     return(
         <div id='project-list'>
             <Link key={project.id} to={`/projects/${project.id}`}>
-                <h4><a>{project.name}</a></h4>
+                <h4><a href={`/projects/${project.id}`}>{project.name}</a></h4>
                 <LazyLoad height={250} once>
                     <img alt={project.name} src={project.image_url}/>
                 </LazyLoad>

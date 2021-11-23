@@ -6,7 +6,7 @@ class Home extends Component {
             <div className="home-1">
                 <div id='home'>
                     <br /><br />
-                    <img src="./images/signature.png" />
+                    <img src="./images/signature.png" alt="Jack Madden" />
                     <br />
                     <small><h2>Full-Stack Software Engineer</h2></small>
                     <br /><br /><br />
